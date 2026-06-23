@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог комп'ютерних ігор</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">GameCatalog</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link" id="navHome">Головна</a>
+        <a href="#favorites" class="nav-link" id="navFavorites">Обране <span id="favoritesCount" class="badge badge-mini">0</span></a>
+      </nav>
+      <div class="header-actions">
+        <div class="control-group header-control">
+          <label for="languageSelect">Мова</label>
+          <select id="languageSelect">
+            <option value="uk">Українська</option>
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div class="control-group header-control">
+          <label for="themeSelect">Тема</label>
+          <select id="themeSelect">
+            <option value="dark">Темна</option>
+            <option value="light">Світла</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="hero-card">
+      <div>
+        <p class="eyebrow" id="heroTag">Курсова робота</p>
+        <h1 id="heroTitle">Каталог комп'ютерних ігор</h1>
+        <p id="heroSubtitle">Навчальний веб-сайт для перегляду, пошуку та фільтрації ігор за жанром, платформою, рейтингом і роком релізу.</p>
+      </div>
+      <div class="hero-action">
+        <button type="button" class="btn" id="show-filters">Показати фільтри</button>
+      </div>
+    </section>
+
+    <section class="features-grid">
+      <article class="feature-card">
+        <h3>Зручний каталог</h3>
+        <p>Швидко знайдіть гру за жанром, платформою або назвою.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Детальні описи</h3>
+        <p>Переглядайте повні сторінки з інформацією про кожну гру.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Обране</h3>
+        <p>Зберігайте улюблені ігри та повертайтеся до них швидко.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Адаптивний дизайн</h3>
+        <p>Інтерфейс виглядає комфортно на телефоні, планшеті й на комп'ютері.</p>
+      </article>
+    </section>
+
+    <section class="controls-panel" id="filterPanel">
+      <div class="control-group">
+        <label id="searchLabel" for="searchInput">Пошук</label>
+        <input id="searchInput" type="search" placeholder="Наприклад: Witcher, RPG, PC">
+      </div>
+      <div class="control-group">
+        <label id="genreLabel" for="genreSelect">Жанр</label>
+        <select id="genreSelect">
+          <option value="all">Усі жанри</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label id="platformLabel" for="platformSelect">Платформа</label>
+        <select id="platformSelect">
+          <option value="all">Усі платформи</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label id="sortLabel" for="sortSelect">Сортування</label>
+        <select id="sortSelect">
+          <option value="default">За замовчуванням</option>
+          <option value="ratingDesc">Рейтинг: спочатку кращі</option>
+          <option value="ratingAsc">Рейтинг: спочатку нижчі</option>
+          <option value="yearDesc">Рік: новіші</option>
+          <option value="yearAsc">Рік: старіші</option>
+          <option value="nameAsc">Назва: А→Я</option>
+          <option value="nameDesc">Назва: Я→А</option>
+        </select>
+      </div>
+      <div class="control-group control-group--button">
+        <label>&nbsp;</label>
+        <button type="button" class="btn btn-secondary" id="clearFilters">Скинути фільтри</button>
+      </div>
+    </section>
+
+    <section class="results-row">
+      <p id="resultInfo" aria-live="polite">Показано 0 ігор.</p>
+    </section>
+
+    <section class="games-list" id="gamesList" aria-label="Список ігор"></section>
+
+    <section class="favorites-section" id="favorites">
+      <div class="section-title">
+        <h2 id="favoritesHeading">Обране</h2>
+        <p id="favoritesDescription">Тут зберігаються ігри, які ви додали в обране.</p>
+      </div>
+      <div class="games-list" id="favoritesList"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Каталог комп'ютерних ігор · Навчальний проєкт</p>
+      <p>HTML5 · CSS3 · JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

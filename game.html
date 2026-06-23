@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Опис гри</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">GameCatalog</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link" id="navHome">Головна</a>
+        <a href="index.html#favorites" class="nav-link" id="navFavorites">Обране</a>
+      </nav>
+      <div class="header-actions">
+        <div class="control-group header-control">
+          <label for="languageSelect">Мова</label>
+          <select id="languageSelect">
+            <option value="uk">Українська</option>
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div class="control-group header-control">
+          <label for="themeSelect">Тема</label>
+          <select id="themeSelect">
+            <option value="dark">Темна</option>
+            <option value="light">Світла</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container game-page">
+    <section class="game-detail-card" id="gameDetailCard">
+      <div class="game-detail-image">
+        <img src="" alt="Обкладинка гри" id="detailImage">
+      </div>
+      <div class="game-detail-info">
+        <h1 id="detailTitle">Назва гри</h1>
+        <div class="game-meta" id="detailMeta"></div>
+        <p class="game-description" id="detailDescription"></p>
+        <div class="game-actions">
+          <button type="button" class="btn" id="favoriteButton">Додати в обране</button>
+          <a href="index.html" class="btn btn-secondary" id="returnButton">Повернутися</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Каталог комп'ютерних ігор · Навчальний проєкт</p>
+    </div>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
